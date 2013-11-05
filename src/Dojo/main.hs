@@ -5,9 +5,12 @@ calculateScore :: [(Int, Int)] -> Int
 calculateScore [] = 0
 
 calculateScore (fstTuple:rest) 
-	| firstScore == 10 = firstScore + (fst $ head rest) + (calculateScore rest)
-	| otherwise = firstScore + (calculateScore rest)
-	where firstScore = frameScore fstTuple  
+	| firstScore == 10 = sumOfRest + (nextTry rest)
+	| otherwise = sumOfRest
+	where
+		sumOfRest = firstScore + (calculateScore rest)
+		firstScore = frameScore fstTuple
+		nextTry = fst . head
 
 frameScore :: (Int,Int) -> Int
 frameScore (a,b) = a + b
