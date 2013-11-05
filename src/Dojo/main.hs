@@ -3,4 +3,4 @@ module Dojo.Main where
 
 calculateScore :: [(Int, Int)] -> Int
 calculateScore frames = 
-	0
+	let firstTuple:_ = frames in fst firstTuple

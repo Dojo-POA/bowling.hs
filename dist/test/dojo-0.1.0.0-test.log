@@ -2,9 +2,10 @@ Test suite test: RUNNING...
 
 Dojo.Main
   Calculate Bowling score
-    - should be zero when all rows is 0
+    - should be zero when all frames are 0
+    - should be 1 when first try of the first frame is one and the rest is 0
 
 Finished in 0.0001 seconds
-1 example, 0 failures
+2 examples, 0 failures
 Test suite test: PASS
 Test suite logged to: dist/test/dojo-0.1.0.0-test.log
