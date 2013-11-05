@@ -30,6 +30,11 @@ spec = do
     it "should be 22 when first frame is strike, the second is (4,2) and rest is (0,0)" $ do
       (calculateScore $ (10,0) : (4,2) : (replicate 8 (0, 0))) `shouldBe` 22
 
+    it "should be 51 (boa ideia :) when first two frames are strike, the third is (5,3) and rest is (0,0)" $ do
+      (calculateScore $ (10, 0) : (10, 0) : (5,3) : (replicate 7 (0, 0))) `shouldBe` 51
+
+
+
 
 
 

@@ -9,8 +9,9 @@ Dojo.Main
     - should be 16 when first frame is spare, the second is (3,0) and rest is (0,0)
     - should be 32 when first and second frames spares, the third is (3,0) and rest is (0,0)
     - should be 22 when first frame is strike, the second is (4,2) and rest is (0,0)
+    - should be 51 (boa ideia :) when first two frames are strike, the third is (5,3) and rest is (0,0)
 
 Finished in 0.0002 seconds
-7 examples, 0 failures
+8 examples, 0 failures
 Test suite test: PASS
 Test suite logged to: dist/test/dojo-0.1.0.0-test.log
