@@ -4,15 +4,17 @@ module Dojo.Main where
 calculateScore :: [(Int, Int)] -> Int
 calculateScore [] = 0
 
-calculateScore (fstTuple:rest) 
-	| firstFirst == 10 = sumOfRest + (frameScore $ head rest)
-	| firstScore == 10 = sumOfRest + (nextTry rest)
-	| otherwise = sumOfRest
+calculateScore (frame:rest) 
+	| isStrike = scoreRest + nextScore
+	| isSpare = scoreRest + nextTry
+	| otherwise = scoreRest
 	where
-		sumOfRest = firstScore + (calculateScore rest)
-		firstScore = frameScore fstTuple
-		nextTry = fst . head
-		firstFirst = fst fstTuple		
+		scoreRest = frameScore + (calculateScore rest)
+		frameScore = score frame
+		nextTry = fst $ head rest
+		nextScore = score $ head rest
+		isStrike = fst frame == 10
+		isSpare = frameScore == 10
 
-frameScore :: (Int,Int) -> Int
-frameScore (a,b) = a + b
+score :: (Int,Int) -> Int
+score (a,b) = a + b
