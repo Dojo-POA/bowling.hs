@@ -5,9 +5,9 @@ Dojo.Main
     - should be zero when all frames are 0
     - should be 1 when first frame is (1,0) and rest is (0,0)
     - should be 3 when first frame is (1,2) and rest is (0,0)
-    - should be 5 when first frames are (1,2) and (1,1) rest is (0,0)
+    - should be 50 when all frames are (3,2)
 
-Finished in 0.0002 seconds
+Finished in 0.0001 seconds
 4 examples, 0 failures
 Test suite test: PASS
 Test suite logged to: dist/test/dojo-0.1.0.0-test.log

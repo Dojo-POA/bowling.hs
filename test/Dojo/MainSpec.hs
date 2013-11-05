@@ -18,6 +18,6 @@ spec = do
     it "should be 3 when first frame is (1,2) and rest is (0,0)" $ do
       (calculateScore $ (1, 2) : (replicate 9 (0, 0))) `shouldBe` 3
 
-    it "should be 5 when first frames are (1,2) and (1,1) rest is (0,0)" $ do
-      (calculateScore $ (1, 2) : (1,1) : (replicate 8 (0, 0))) `shouldBe` 5
+    it "should be 50 when all frames are (3,2)" $ do
+      (calculateScore $ replicate 10 (3, 2)) `shouldBe` 50
 
