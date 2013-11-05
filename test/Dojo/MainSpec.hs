@@ -19,5 +19,8 @@ spec = do
       (calculateScore $ (1, 2) : (replicate 9 (0, 0))) `shouldBe` 3
 
     it "should be 50 when all frames are (3,2)" $ do
-      (calculateScore $ replicate 10 (3, 2)) `shouldBe` 50
+      (calculateScore $ replicate 10 (3, 2)) `shouldBe` 50  
+
+    it "should be 16 when first frame is (6,4) the second is (3,0) and rest is (0,0)" $ do
+      (calculateScore $ (6,4) : (3,0) : (replicate 8 (0, 0))) `shouldBe` 16
 
