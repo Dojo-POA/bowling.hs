@@ -1,2 +1,2 @@
-dojo-haskell.hs
+bowling.hs
 ==============
